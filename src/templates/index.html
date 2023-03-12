@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <title>Youtube Script Generator</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='PhillyStyle.css') }}">
+  
+  <!--<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />-->
+</head>
+
+<body>
+  <!--<script type = text/javascript src="copy.js"></script>-->
+  <div class = "gradient">
+  <div class="box">
+    <h1>Video Essay Generator</h1>
+    
+  <form action="/" method="post">
+    <input type="text" name="idea" placeholder="Give a video idea" required />
+    <input type="submit" value="Generate script" />
+  <br>
+  
+  <div class="dropdown">
+    <label for="dropbtn" class="dropbtn" >Choose a category:</label>
+    <div class="opt">
+    <!--<form action="/" method="post">-->
+    <input type="radio" name="category" value="Gaming">
+    <label class="dropdown-content">Gaming</label><br>
+    <input type="radio"  name="category" value="Music">
+    <label class="dropdown-content">Music</label><br>
+    <input type="radio"  name="category" value="Sports">
+    <label class="dropdown-content">Sports</label><br>
+    <input type="radio"  name="category" value="Automotive">
+    <label class="dropdown-content">Automotive</label>
+  </div>
+  </div>
+    <br>
+    <br>
+    <div class="traits">
+      <div class="trait_1">
+        <label class="dropbtn" style = "text-align: center;">Trait 1:</label><br>
+        <input type="radio" name="trait1" value="Serious">
+        <label class="dropdown-content">Serious</label><br>
+        <input type="radio" name="trait1" value="Charismatic">
+        <label class="dropdown-content">Charismatic</label><br>
+        <input type="radio" name="trait1" value="Funny">
+        <label class="dropdown-content">Funny</label><br>
+        <input type="radio" name="trait1" value="Intellectual">
+        <label class="dropdown-content">Intellectual</label><br>
+      </div>
+      <div class="trait_2">
+        <label class="dropbtn">Trait 2:</label><br>
+        
+        <input type="radio" name="trait2" value="Serious">
+        <label class="dropdown-content">Serious</label><br>
+        <input type="radio" name="trait2" value="Charismatic">
+        <label class="dropdown-content">Charismatic</label><br>
+        <input type="radio" name="trait2" value="Funny">
+        <label class="dropdown-content">Funny</label><br>
+        <input type="radio" name="trait2" value="Intellectual">
+        <label class="dropdown-content">Intellectual</label><br>
+      </div>
+      
+     
+  </form>
+<div>
+  <br>
+ 
+</div>
+<br>
+  
+  <div class="final">
+    {% if result %}
+    <div class = "copyButtonDiv">
+      <br>
+    <!--<button class="copyButton" onmousedown="copyFunction()">Copy text</button>-->
+    <br>
+  </div>
+    <div class="result" id="finalResult" onclick="copyDivToClipboard()">{{ result }}
+      <script>
+        function copyDivToClipboard() {
+            var range = document.createRange();
+            range.selectNode(document.getElementById("a"));
+            window.getSelection().removeAllRanges(); 
+            window.getSelection().addRange(range); 
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+    </div>
+    {% endif %}
+  </div>
+</div>
+  
+  <br>
+
+
+
+ 
+</body>

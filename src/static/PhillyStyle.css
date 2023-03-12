@@ -1,0 +1,176 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 850px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)),url('skyline.jpg');
+    background-position-y: top;
+    background-position-x: center;
+    font-family: sans-serif;
+    /*background-size: 115%;*/
+    
+}
+
+h1{
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+}
+div[class=result] {
+    background-color: white;
+    border-color: #FF0000;
+    border-radius: 5px;
+    box-shadow:0px 8px 16px 0px #B90E0A;
+    align-items: center;
+    display: block;
+   
+    width: 450px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+  }
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%,-50%);
+}
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+input[type="text"]{
+    background: #fff;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+input[type="submit"]{
+    position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #FF0000;
+    color: #fff;
+}
+input[type="submit"]:hover{
+    background: #B90E0A;
+}
+.dropbtn {
+    background-color: #FF0000;
+    align-self: center;
+    color: #fff;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px;
+    vertical-align: top;
+    text-align: center;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-table;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+  }
+  .dropdown-content {
+    display: inline-block;
+    text-align: center;
+    
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  .dropdown-content.hover {
+    display: inline;
+    background-color: #b2b0b0;
+}
+.dropbtn:hover .dropdown-content {
+    display: inline;
+}
+.dropdown:hover .dropbtn {
+    background-color: #B90E0A;
+}
+.opt{
+    display: inline-block;
+    margin-left: 15px;
+}
+select {
+    display: inline;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: white;
+    background-image: none;
+    border: 1px solid black;
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 .5em;
+  
+    cursor: pointer;
+}
+input[type=radio]{
+    vertical-align: middle;
+    margin: 0px;
+}
+.traits{
+
+    display: inline;
+}
+.trait_1{
+
+    display: inline-block;
+}
+.trait_2{
+    
+    display: inline-block;
+    margin-left: 40px;
+}
+.final{
+text-align: center;
+justify-content: center;
+display: block;
+align-items: center;
+}
+button[class=copyButton]{
+    background-color: #FF0000;
+    color: #fff;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px;
+}
+button[class=copyButton]
